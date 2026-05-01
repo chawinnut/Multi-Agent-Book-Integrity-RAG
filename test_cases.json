@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "category": "Direct Fact",
+        "question": "Tell me about the book 'The Hours'.",
+        "expected_behavior": "Should provide accurate details about Michael Cunningham and the Pulitzer Prize."
+    },
+    {
+        "id": 2,
+        "category": "Negative Constraint (Hallucination Test)",
+        "question": "Do you know a book about a green elephant?",
+        "expected_behavior": "Grader should detect hallucination and Editor should admit the information is missing."
+    },
+    {
+        "id": 3,
+        "category": "Ambiguous/Related Info",
+        "question": "Is there a book with a rainbow crow?",
+        "expected_behavior": "Should not confuse with other bird stories; should acknowledge lack of specific data."
+    },
+    {
+        "id": 4,
+        "category": "Negative Constraint (Hallucination Test)",
+        "question": "Do you know a book that has female hat?",
+        "expected_behavior": "Should NOT map this to 'Blue Hat, Green Hat' just because of the word 'hat'. The Grader should detect that the content is not about 'female' hats and the Editor should admit no specific info exists."
+
+    },
+    {
+        "id": 5,
+        "category": "Strict Factual Retrieval",
+        "question": "What is the primary setting of 'The Tale of Peter Rabbit'?",
+        "expected_behavior": "Should explicitly admit that it doesn't have an answer."
+    },
+    {
+        "id": 6,
+        "category": "Exact Match Integrity",
+        "question": "Is 'Lion of Ireland (Celtic World of Morgan Llywelyn, 5)' a bestseller?",
+        "expected_behavior": "It should answer that this book is a Morgan Llywelyn's New York Times bestselling"
+    },
+    {
+        "id": 7,
+        "category": "Categorical Retrieval",
+        "question": "Which books are categorized for 'Children 5 to 7'?",
+        "expected_behavior": "Should list 'Among the Forest People' accurately based on the CSV tags."
+    },
+    {
+        "id": 8,
+        "category": "Negative Constraint (Semantic Overlap)",
+        "question": "Is there a story about a 'Green Elephant' by Sandra Boynton?",
+        "expected_behavior": "It should acknowledge the missing info."
+    },
+    {
+        "id": 9,
+        "category": "Attribute Extraction",
+        "question": "Who is the author of 'The Spire'?",
+        "expected_behavior": "Should identify 'William Golding'."
+    },
+    {
+        "id": 10,
+        "category": "Boundary Testing (Out of 100-row Context)",
+        "question": "Does the data mention anything about 'Consider the Oyster'?",
+        "expected_behavior": "Since it's not in the first 100 rows of this specific dataset, the AI must strictly state it has no information."
+    }
+]
