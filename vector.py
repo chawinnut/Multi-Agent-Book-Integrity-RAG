@@ -16,7 +16,7 @@ if add_documents:
 
     for i, row in df.iterrows():
         # use f-string to deal with None and Nan automatically
-        content = f"{row["Title"]} {row["Description"]}"
+        content = f"{row'Title']} {row['Description']}"
 
         document = Document(
             page_content=content,
