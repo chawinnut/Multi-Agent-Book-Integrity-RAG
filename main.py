@@ -23,7 +23,9 @@ Here is the question to answer: {question}
 """
 
 prompt = ChatPromptTemplate.from_template(template)
-chain = prompt | model
+# เปลี่ยนชื่อเพื่อให้เข้าใจง่ายขึ้นในโปรเจกต์ใหญ่
+librarian_chain = prompt | model 
+
 
 # 2) Grader Template: Hallucination Detection
 grader_template = """
@@ -91,7 +93,7 @@ def start_chat():
         context_text = "\n\n".join([d.page_content for d in docs])
 
         # Generate response
-        response = chain.invoke({"reviews": context_text, "question": question})
+        response = librarian_chain.invoke({"reviews": context_text, "question": question})
 
         max_retries = 3  # Prevent infinite loop
         attempts = 0
