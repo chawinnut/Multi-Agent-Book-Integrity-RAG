@@ -1,0 +1,91 @@
+2026-05-01 17:27:10,461 - INFO - TEST CASE 1 | CATEGORY: Direct Fact ---
+2026-05-01 17:27:10,461 - INFO - QUESTION: Tell me about the book 'The Hours'.
+2026-05-01 17:27:11,242 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-05-01 17:27:42,387 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:27:47,337 - INFO - Initial Draft from Librarian: "The Hours" by Michael Cunningham is a Pulitzer Prize-winning novel that tells the story of a group of contemporary characters struggling with conflicting claims of love, inheritance, hope, and despair. The narrative counterpoints the fictional stories of Samuel, a famous poet, and his lifelong friend Clarissa, who strives to forge a balanced life despite the demands of friends, lovers, and family.
+2026-05-01 17:28:20,098 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:28:20,232 - INFO - Attempt 1 - Grader's Feedback: CORRECT
+2026-05-01 17:28:20,232 - INFO - Status: PASSED at attempt 1
+2026-05-01 17:28:20,232 - INFO - TEST CASE 2 | CATEGORY: Negative Constraint (Hallucination Test) ---
+2026-05-01 17:28:20,232 - INFO - QUESTION: Do you know a book about a green elephant?
+2026-05-01 17:28:20,297 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-05-01 17:28:35,935 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:28:36,354 - INFO - Initial Draft from Librarian: I don't have an answer.
+2026-05-01 17:28:52,641 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:28:55,598 - INFO - Attempt 1 - Grader's Feedback: HALLUCINATION. The AI's answer doesn't mention any details about a book mentioned in the question, which is "Blue Hat". Instead, it says "I don't have an answer", which aligns with the negative rule.
+2026-05-01 17:29:08,548 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:29:09,491 - INFO - Attempt 1 - Editor's Refinement: The children in Blue Hat learn about colors, clothes, and getting dressed.
+2026-05-01 17:29:25,828 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:29:26,011 - INFO - Attempt 2 - Grader's Feedback: CORRECT.
+2026-05-01 17:29:26,011 - INFO - Status: PASSED at attempt 2
+2026-05-01 17:29:26,011 - INFO - TEST CASE 3 | CATEGORY: Ambiguous/Related Info ---
+2026-05-01 17:29:26,011 - INFO - QUESTION: Is there a book with a rainbow crow?
+2026-05-01 17:29:26,067 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-05-01 17:29:40,930 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:29:41,347 - INFO - Initial Draft from Librarian: I don't have an answer.
+2026-05-01 17:29:56,796 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:29:57,109 - INFO - Attempt 1 - Grader's Feedback: HALLUCINATION.
+2026-05-01 17:30:08,656 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:30:10,481 - INFO - Attempt 1 - Editor's Refinement: The book "Blue Hat, Green Hat" by Sandra Boynton is a classic board book that teaches children about colors, clothes, and getting dressed.
+2026-05-01 17:30:26,792 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:30:26,919 - INFO - Attempt 2 - Grader's Feedback: CORRECT
+2026-05-01 17:30:26,919 - INFO - Status: PASSED at attempt 2
+2026-05-01 17:30:26,919 - INFO - TEST CASE 4 | CATEGORY: Negative Constraint (Hallucination Test) ---
+2026-05-01 17:30:26,919 - INFO - QUESTION: Do you know a book that has female hat?
+2026-05-01 17:30:26,986 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-05-01 17:30:45,469 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:30:48,201 - INFO - Initial Draft from Librarian: Yes, I can tell you about a book with a female hat. The Blue Hat is a book about an animal wearing a blue hat, which is later revealed to be Jane Waterleigh in "Consider Her Ways".
+2026-05-01 17:31:08,579 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:31:08,708 - INFO - Attempt 1 - Grader's Feedback: CORRECT
+2026-05-01 17:31:08,708 - INFO - Status: PASSED at attempt 1
+2026-05-01 17:31:08,708 - INFO - TEST CASE 5 | CATEGORY: Strict Factual Retrieval ---
+2026-05-01 17:31:08,708 - INFO - QUESTION: What is the primary setting of 'The Tale of Peter Rabbit'?
+2026-05-01 17:31:08,775 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-05-01 17:31:28,677 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:31:29,115 - INFO - Initial Draft from Librarian: I don't have an answer.
+2026-05-01 17:31:49,392 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:31:49,520 - INFO - Attempt 1 - Grader's Feedback: CORRECT
+2026-05-01 17:31:49,520 - INFO - Status: PASSED at attempt 1
+2026-05-01 17:31:49,520 - INFO - TEST CASE 6 | CATEGORY: Exact Match Integrity ---
+2026-05-01 17:31:49,520 - INFO - QUESTION: Is 'Lion of Ireland (Celtic World of Morgan Llywelyn, 5)' a bestseller?
+2026-05-01 17:31:49,610 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-05-01 17:32:15,738 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:32:17,739 - INFO - Initial Draft from Librarian: Yes, "Lion of Ireland (Celtic World of Morgan Llywelyn, 5)" is a New York Times bestselling book.
+2026-05-01 17:32:45,099 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:32:45,248 - INFO - Attempt 1 - Grader's Feedback: CORRECT
+2026-05-01 17:32:45,248 - INFO - Status: PASSED at attempt 1
+2026-05-01 17:32:45,249 - INFO - TEST CASE 7 | CATEGORY: Categorical Retrieval ---
+2026-05-01 17:32:45,249 - INFO - QUESTION: Which books are categorized for 'Children 5 to 7'?
+2026-05-01 17:32:45,334 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-05-01 17:33:04,358 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:33:06,372 - INFO - Initial Draft from Librarian: The two books that are categorized for 'Children 5 to 7' are:
+
+1. Among the Forest People
+2. Blue Hat, Green Hat
+2026-05-01 17:33:24,429 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:33:24,613 - INFO - Attempt 1 - Grader's Feedback: CORRECT
+2026-05-01 17:33:24,613 - INFO - Status: PASSED at attempt 1
+2026-05-01 17:33:24,613 - INFO - TEST CASE 8 | CATEGORY: Negative Constraint (Semantic Overlap) ---
+2026-05-01 17:33:24,614 - INFO - QUESTION: Is there a story about a 'Green Elephant' by Sandra Boynton?
+2026-05-01 17:33:24,712 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-05-01 17:33:40,858 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:33:41,287 - INFO - Initial Draft from Librarian: I don't have an answer.
+2026-05-01 17:33:57,113 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:33:57,240 - INFO - Attempt 1 - Grader's Feedback: CORRECT
+2026-05-01 17:33:57,240 - INFO - Status: PASSED at attempt 1
+2026-05-01 17:33:57,240 - INFO - TEST CASE 9 | CATEGORY: Attribute Extraction ---
+2026-05-01 17:33:57,240 - INFO - QUESTION: Who is the author of 'The Spire'?
+2026-05-01 17:33:57,305 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-05-01 17:34:16,560 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:34:17,717 - INFO - Initial Draft from Librarian: According to the text, the author of "The Spire" is William Golding.
+2026-05-01 17:34:37,729 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:34:37,855 - INFO - Attempt 1 - Grader's Feedback: CORRECT
+2026-05-01 17:34:37,855 - INFO - Status: PASSED at attempt 1
+2026-05-01 17:34:37,855 - INFO - TEST CASE 10 | CATEGORY: Boundary Testing (Out of 100-row Context) ---
+2026-05-01 17:34:37,855 - INFO - QUESTION: Does the data mention anything about 'Consider the Oyster'?
+2026-05-01 17:34:37,920 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-05-01 17:35:04,639 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:35:05,106 - INFO - Initial Draft from Librarian: I don't have an answer.
+2026-05-01 17:35:33,448 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-01 17:35:33,580 - INFO - Attempt 1 - Grader's Feedback: CORRECT
+2026-05-01 17:35:33,580 - INFO - Status: PASSED at attempt 1
