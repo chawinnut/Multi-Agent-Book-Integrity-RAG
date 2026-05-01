@@ -7,7 +7,7 @@
 | 1 | Tell me about the book 'The Hours'. | PASS | 1 | 64.29s |
 | 2 | Do you know a book about a green elephant? | PASS | 1 | 35.67s |
 | 3 | Is there a book with a rainbow crow? | PASS | 2 | 63.53s |
-| 4 | Do you know a book that has female hat? | PASS | 1 | 44.13s | #INCORRECT
+| 4 | Do you know a book that has female hat? | PASS #INCORRECT | 1 | 44.13s | #INCORRECT
 | 5 | What is the primary setting of 'The Tale of Peter Rabbit'? | PASS | 1 | 43.43s |
 | 6 | Is 'Lion of Ireland (Celtic World of Morgan Llywelyn, 5)' a bestseller? | PASS | 1 | 55.94s |
 | 7 | Which books are categorized for 'Children 5 to 7'? | PASS | 1 | 39.53s | #EXTERNAL KNOWLEDGE
