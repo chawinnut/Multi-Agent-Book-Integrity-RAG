@@ -33,7 +33,7 @@ The system is aim to handle common RAG failure modes, such as Out-of-context que
 | **Topic Shift** | "Is there a Rainbow Crow?" | Discusses generic birds. | **Rejected.** Identifies specific topic as missing. |  Passed |
 | **Factual Retrieval** | "Tell me about 'The Hours'" | Accurate description. | **Verified.** Confirmed against CSV metadata. |  Passed |
 
-Current Limitations: Mention that the 3B model occasionally relies on pre-trained knowledge for common titles (e.g., Children's books) and I am working on stricter attribute filtering (e.g., gender).
+Current Limitations: Agent still relies on pre-trained knowledge for common titles (e.g., Children's books) and I am working on stricter attribute filtering (e.g., gender).
 
 ---
 
